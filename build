@@ -1,0 +1,1 @@
+docker build -t ly3ff-xlxd:1 .

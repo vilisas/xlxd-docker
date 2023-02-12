@@ -1,0 +1,29 @@
+version: '3'
+services:
+  xlxd:
+#    build:
+#      context: .
+    image: ly3ff-xlxd:1
+    container_name: xlxd
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+      - "10001:10001/udp"
+      - "10002:10002/udp"
+      - "42000:42000/udp"
+      - "30001:30001/udp"
+      - "20001:20001/udp"
+      - "30041:30051/udp"
+      - "8880:8880/udp"
+      - "62030:62030/udp"
+      - "10100:10100/udp"
+      - "10101-10199:10101-10199/udp"
+      - "12345-12346:12345-12346/udp"
+      - "40000:40000/udp"
+      - "21110:21110/udp"
+
+# set values here
+    environment:
+      - XLX_REFLECTOR_NAME=XLXREF
+      - XLX_XLXD_IP=127.0.0.1
+      - XLX_AMBED_IP=127.0.0.1
